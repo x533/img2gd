@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>square thing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="min.css">
+</head>
+<div class="container">
+    <br>
+    <br>
+
+    <body>
+        <h2 class="und">square thing</h2>
+        <canvas id="ocanvas" style="border:2px solid green" width="100" height="75"></canvas>
+        <canvas id="canvas" style="border:2px solid black;display:none;" width="100" height="75"></canvas>
+        <script src="fac.min.js"></script>
+        <script type="module" src="pixelmatch.js"></script>
+        <script type="module" src="script.js"></script>
+        <canvas id="fcanvas" style="border:2px solid blue" width="100" height="75"></canvas><br>
+        <input type="text" id="gens" placeholder="squares" value="10" /> <br>(generally use lower values for larger
+        sizes, then increase for smaller sizes)<br><br>
+        <input type="text" id="tries" placeholder="samples" value="30" /><br> (use higher values for better looking
+        images but longer load times, also increase for smaller sizes)<br><br>
+        <button class="btn btn-a btn-sm smooth" id="btn">generate</button>
+        <!--button type="btn smooth" id="abtn">auto generate</button-->
+        <p id="objs">objects: 0</p>
+        <p id="size">size: 40</p>
+        <p id="status">do not click the generate button while the object count is increasing</p>
+        <button id="export" class="btn btn-b btn-sm smooth">export</button><br>
+    </body>
+</div>
+
+</html>
