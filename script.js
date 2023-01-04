@@ -103,10 +103,10 @@ function main() {
     wid = 30 * current//randomIntFromInterval(1, 100);
     len = 30 * current//randomIntFromInterval(1, 75);
 
-    var randx = randomIntFromInterval(0, 100) - wid / 2;
-    var randy = randomIntFromInterval(0, 75) - len / 2;
+    var randx = randomIntFromInterval(0, 200) - wid / 2;
+    var randy = randomIntFromInterval(0, 150) - len / 2;
 
-    ctx.clearRect(0, 0, 100, 75);
+    ctx.clearRect(0, 0, 200, 150);
 
     if (final) {
         ctx.putImageData(final, 0, 0);
@@ -123,9 +123,9 @@ function main() {
 	
     //ctx.fillRect(randx, randy, wid, len);
 
-    dcanv = octx.getImageData(0, 0, 100, 75);
-    dcanvd = ctx.getImageData(0, 0, 100, 75);
-    score = pixelmatch(dcanv.data, dcanvd.data, null, 100, 75, { threshold: 0.1 });
+    dcanv = octx.getImageData(0, 0, 200, 150);
+    dcanvd = ctx.getImageData(0, 0, 200, 150);
+    score = pixelmatch(dcanv.data, dcanvd.data, null, 200, 150, { threshold: 0.1 });
     if (score < bestdiff) {
         bestdiff = score;
         stuff = [randx, randy, wid, len, col, current];
@@ -171,7 +171,7 @@ $.add(obj {
     Z_ORDER: ${zlayer},
 })`
 zlayer++;
-        final = fctx.getImageData(0, 0, 100, 75);
+        final = fctx.getImageData(0, 0, 200, 150);
         oldstuff = stuff;
         total++;
         f++;
