@@ -151,7 +151,7 @@ function thingie() {
     }
     //fctx.clearRect(0, 0, 100, 75);
     //OBJ_ID: 211, 1888
-    if(oldstuff != stuff) {
+  //  if(oldstuff != stuff) {----------------------------
 		 fctx.beginPath();
         fctx.fillStyle = `rgb(${stuff[4][0]}, ${stuff[4][1]}, ${stuff[4][2]})`;
 		 fctx.arc(stuff[0], stuff[1], stuff[2]/2, 0, 2 * Math.PI, false)
@@ -175,7 +175,7 @@ zlayer++;
         oldstuff = stuff;
         total++;
         f++;
-    }
+   // } ---------------------------------------
 
     //console.log(f);
 
