@@ -103,8 +103,8 @@ function main() {
     wid = 30 * current//randomIntFromInterval(1, 100);
     len = 30 * current//randomIntFromInterval(1, 75);
 
-    var randx = randomIntFromInterval(0, 100) - wid / 2;
-    var randy = randomIntFromInterval(0, 75) - len / 2;
+    var randx = randomIntFromInterval(0, 200) - wid / 2;
+    var randy = randomIntFromInterval(0, 150) - len / 2;
 
     ctx.clearRect(0, 0, 100, 75);
 
