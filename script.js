@@ -160,9 +160,10 @@ function thingie() {
 		 fctx.stroke();
         //fctx.fillRect(stuff[0], stuff[1], stuff[2], stuff[3]);
         var hsv = rgb2hsv(stuff[4][0], stuff[4][1], stuff[4][2]);
-        objects+=`
+        if(oldstuff != stuff) {
+		objects+=`
 $.add(obj {
-	 OBJ_ID: 1764,
+OBJ_ID: 1764,
     X: ${Math.round(stuff[0]*1)},
     Y: ${Math.round(stuff[1]*1)},
     SCALING: ${stuff[5]*5.5},
@@ -170,6 +171,7 @@ $.add(obj {
     HVS: "${hsv.h}a${hsv.s/100}a${hsv.v/100}a0a0",
     Z_ORDER: ${zlayer},
 })`
+	}
 zlayer++;
         final = fctx.getImageData(0, 0, 200, 150);
         oldstuff = stuff;
